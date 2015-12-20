@@ -1,7 +1,7 @@
 ---
 name: <%= name %>
 template: page.html
-priority: 3
+priority: 0.5
 linkTitle: <%= name %>
 draft: false
 ---
