@@ -13,7 +13,7 @@
     "gulp-sass": "^2.0.1",
     "gulp-uglify": "^1.2.0",
     "lodash.assign": "^3.2.0",
-    "metalsmith": "^1.0.1",
+    "metalsmith": "^2.1.0",
     "metalsmith-better-excerpts": "^0.1.5",
     "metalsmith-collections": "^0.7.0",
     "metalsmith-drafts": "0.0.1",
