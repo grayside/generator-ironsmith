@@ -5,6 +5,8 @@ var config = {
       url: process.env.SITE_URL || 'http://example.com', // full site url
       title: '<%= name %>',
       comments: true,
+      // @todo complete support for social icons.
+      show_social_icons: false,
       disqus: process.env.DISQUS || 'example',
       googleAnalytics: process.env.GOOGLE_ANALYTICS || '123457'
     }
@@ -15,6 +17,8 @@ var config = {
       url: process.env.DEV_SITE_URL || 'http://localhost:8000', // full site url
       title: '<%= name %>',
       comments: true,
+      // @todo complete support for social icons.
+      show_social_icons: false,
       disqus: process.env.DEV_DISQUS || 'staging-example',
       googleAnalytics: process.env.DEV_GOOGLE_ANALYTICS || '123456'
     }
@@ -22,6 +26,7 @@ var config = {
   social: {
     github_username: '',
     stackoverflow_id: '',
+    // Exclude @-prefix.
     twitter_username: '',
     google_plus_id: '',
     email: '',
