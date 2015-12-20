@@ -1,6 +1,6 @@
 ---
 title: Lorem dolor sit amet
-template: post.html
+layout: post.html
 date: 2014-05-05
 description: this is just a description
 author: <%= author %>

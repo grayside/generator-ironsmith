@@ -1,6 +1,6 @@
 ---
 title: Blog Post Title
-template: post.html
+layout: post.html
 date: 2015-03-02
 description: this is just a description
 author: <%= author %>

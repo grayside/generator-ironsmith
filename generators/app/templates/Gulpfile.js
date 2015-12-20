@@ -82,14 +82,14 @@ gulp.task('watch', function () {
   gulp.watch(['images/*'], ['images-watch']);
   gulp.watch('./js/**/*.js', ['scripts-watch']);
   gulp.watch('./scss/**/*.scss', ['styles-watch']);
-  gulp.watch(['./src/**/*.html', './src/**/*.md', './templates/**/*.html'], ['metalsmith-watch']);
+  gulp.watch(['./src/**/*.html', './src/**/*.md', './layouts/**/*.html'], ['metalsmith-watch']);
 });
 
 gulp.task('watch:prod', function () {
   gulp.watch(['images/*'], ['images-watch']);
   gulp.watch('./js/**/*.js', ['scripts-watch']);
   gulp.watch('./scss/**/*.scss', ['styles-watch']);
-  gulp.watch(['./src/**/*.html', './src/**/*.md', './templates/**/*.html'], ['metalsmith:prod-watch']);
+  gulp.watch(['./src/**/*.html', './src/**/*.md', './layouts/**/*.html'], ['metalsmith:prod-watch']);
 });
 
 gulp.task('build', ['images', 'styles', 'scripts', 'metalsmith']);

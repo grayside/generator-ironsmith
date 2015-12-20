@@ -1,6 +1,6 @@
 ---
 name: hello world
-template: home.html
+layout: home.html
 priority: 1
 linkTitle: Home
 ---
