@@ -21,9 +21,10 @@
 {% endblock %}
 
 {% block thirdparty %}
+{% if site.comments && site.disqus || site.show_social_icons %}
 <script type="text/javascript">
-  // disqus
   {% if site.comments && site.disqus %}
+  // disqus
   var disqus_shortname = '{{site.disqus}}';
   var disqus_title = '{{title}}';
   var disqus_url = '{{site.url}}/{{path}}/';
@@ -33,7 +34,10 @@
     (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
   })();
   {% endif %}
+  {% if site.show_social_icons %}
   // Twitter
   !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');
+  {% endif %}
 </script>
+{% endif %}
 {% endblock %}

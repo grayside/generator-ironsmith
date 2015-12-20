@@ -32,6 +32,7 @@ module.exports = function (production) {
   } else {
     configData = config.development;
   }
+  configData.social = config.social;
 
   return Metalsmith(__dirname)
     .clean(false)
