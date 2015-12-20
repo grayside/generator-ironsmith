@@ -1,7 +1,7 @@
 ---
 name: Styleguide
 template: page.html
-priority: 3
+priority: 0.5
 linkTitle: Styleguide
 draft: false
 ---

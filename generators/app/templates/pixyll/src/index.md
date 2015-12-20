@@ -1,7 +1,7 @@
 ---
 name: hello world
 template: home.html
-priority: 1
+priority: 0.4
 linkTitle: Home
 ---
 
