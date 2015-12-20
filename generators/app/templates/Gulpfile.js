@@ -17,8 +17,8 @@ var images = function() {
 gulp.task('images', ['clean'], images);
 gulp.task('images-watch', images);
 
-gulp.task('clean', function (cb) {
-  return del(['build'], cb);
+gulp.task('clean', function () {
+  return del(['build']);
 });
 
 var styles = function() {
