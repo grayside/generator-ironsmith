@@ -1,6 +1,6 @@
 ---
 title: <%= name %>
-template: post.html
+layout: post.html
 date: <%= today %>
 author: <%= author %>
 tags: <%= tags %>
