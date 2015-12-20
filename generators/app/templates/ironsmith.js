@@ -5,7 +5,8 @@ var feed = require('metalsmith-feed');
 var writemetadata = require('metalsmith-writemetadata');
 var collections = require('metalsmith-collections');
 var markdown = require('metalsmith-markdown');
-var templates = require('metalsmith-templates');
+var inPlace = require('metalsmith-in-place');
+var layouts = require('metalsmith-layouts');
 var permalinks = require('metalsmith-permalinks');
 var tags = require('metalsmith-tags');
 var drafts = require('metalsmith-drafts');
@@ -36,9 +37,9 @@ module.exports = function (production) {
     .clean(false)
     .metadata(configData)
     .use(drafts())
-    .use(templates({
+    // render template data in markdown files
+    .use(inPlace({
       engine: 'swig',
-      inPlace: true,
       pattern: '**/*.md'
     }))
     .use(collections({
@@ -65,23 +66,25 @@ module.exports = function (production) {
     .use(pagination({
       'collections.posts': {
         perPage: 5,
-        template: 'collection.html',
+        layout: 'collection.html',
         first: 'blog/index.html',
         path: 'blog/:num/index.html'
       }
     }))
     .use(tags({
       handle: 'tags',
-      template:'tags.html',
+      layout:'tags.html',
       path:'tags/:tag/index.html',
       pathPage: 'tags/:tag/:num/index.html',
       perPage: 5,
       sortBy: 'data',
       reverse: true
     }))
-    // render template data in markdown files
-    .use(templates({
-      engine: 'swig'
+    // render content into page layouts
+    .use(layouts({
+      engine: 'swig',
+      default: 'default.html',
+      directory: 'layouts'
     }))
     .use(writemetadata({
       bufferencoding: 'utf8',
@@ -94,7 +97,7 @@ module.exports = function (production) {
               "type": "list"
             }
           },
-          ignorekeys: ['history', 'stats', 'next', 'template', 'previous', 'collection', 'mode'],
+          ignorekeys: ['history', 'stats', 'next', 'layout', 'previous', 'collection', 'mode'],
         }
       }
     }))

@@ -1,6 +1,6 @@
 ---
 name: Styleguide
-template: page.html
+layout: page.html
 priority: 0.5
 linkTitle: Styleguide
 draft: false

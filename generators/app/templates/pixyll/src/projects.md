@@ -1,6 +1,6 @@
 ---
 name: About
-template: page.html
+layout: page.html
 priority: 0.5
 linkTitle: About
 ---

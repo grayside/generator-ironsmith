@@ -39,7 +39,7 @@ module.exports = yeoman.generators.Base.extend({
     var that = this;
 
     mkdirp('src/posts');
-    mkdirp('templates');
+    mkdirp('layouts');
     mkdirp('scss');
     mkdirp('js');
     mkdirp('images');
@@ -55,7 +55,7 @@ module.exports = yeoman.generators.Base.extend({
 
     // support a plain theme in the future
     this.directory('pixyll/src', 'src');
-    this.directory('pixyll/templates', 'templates');
+    this.directory('pixyll/layouts', 'layouts');
     this.directory('pixyll/scss', 'scss');
   },
 

@@ -1,7 +1,7 @@
 ---
 title: This will not show up
 draft: true
-template: post.html
+layout: post.html
 date: 2015-05-02
 description: this is just a description
 author: <%= author %>
